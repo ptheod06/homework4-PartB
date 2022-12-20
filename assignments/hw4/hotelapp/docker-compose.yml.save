@@ -42,7 +42,7 @@ services:
     container_name: 'hotel_app_rate'
     entrypoint: rate
     ports:
-      - "8084:8084"
+      - "8081:8081"
     depends_on:
       - mongodb-rate
     restart: always
@@ -63,14 +63,7 @@ services:
 
   mongodb-rate:
     # TODO: Implement me
-    image: mongo:4.4.6
-    container_name: 'hotel_app_rate_mongo'
-    ports:
-      - "27018:27017"
-    restart: always
-    volumes:
-      - rate:/data/db
+    
 
 volumes:
     # TODO: Implement me
-    rate:
